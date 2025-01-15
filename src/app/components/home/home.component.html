@@ -1,0 +1,31 @@
+<div class="p-8">
+    <h1 class="text-4xl font-bold text-center text-blue-600">¡Bienvenido a DHCanalytics!</h1>
+    <p class="mt-4 text-center text-gray-700">Descubre más sobre nuestros servicios y artículos.</p>
+  
+    <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="p-4 bg-white shadow rounded">
+        <h2 class="text-xl font-bold text-gray-800">Servicio 1</h2>
+        <p class="text-gray-600 mt-2">Descripción breve del servicio 1.</p>
+      </div>
+      <div class="p-4 bg-white shadow rounded">
+        <h2 class="text-xl font-bold text-gray-800">Servicio 2</h2>
+        <p class="text-gray-600 mt-2">Descripción breve del servicio 2.</p>
+      </div>
+      <div class="p-4 bg-white shadow rounded">
+        <h2 class="text-xl font-bold text-gray-800">Servicio 3</h2>
+        <p class="text-gray-600 mt-2">Descripción breve del servicio 3.</p>
+      </div>
+    </div>
+  </div>
+  <section class="p-8">
+    <h1 class="text-3xl font-bold mb-6">Artículos Recientes</h1>
+    <div *ngIf="articles.length === 0" class="text-gray-500">No hay artículos recientes.</div>
+    <div *ngIf="articles.length > 0" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div *ngFor="let article of articles" class="p-4 bg-white shadow rounded">
+        <h2 class="text-xl font-semibold">{{ article.title }}</h2>
+        <p class="text-gray-700 mt-2">{{ article.content }}</p>
+        <span class="text-sm text-gray-500">Publicado el {{ article.date | date }}</span>
+      </div>
+    </div>
+  </section>
+  
