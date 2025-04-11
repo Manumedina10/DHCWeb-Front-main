@@ -1,0 +1,5 @@
+/* Espaciado entre secciones y fuente adaptativa */
+h2 {
+    scroll-margin-top: 4rem; /* Para que al usar anclas no quede oculto debajo de un navbar sticky */
+  }
+  
