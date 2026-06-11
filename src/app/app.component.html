@@ -1,8 +1,5 @@
-<nav class="bg-gray-800 text-white p-4 flex justify-between items-center sticky top-0 z-50">
-  <div class="flex items-center space-x-4">
-    <a [routerLink]="'/'" class="text-lg font-bold hover:text-gray-300">Home</a>
-    <a [routerLink]="'/clients'" class="hover:text-gray-300">Clients</a>
-    <a [routerLink]="'/about'" class="hover:text-gray-300">About</a>
-  </div>
-</nav>
-<router-outlet></router-outlet>
+<app-navbar></app-navbar>
+    <main class="min-h-[80vh]">
+      <router-outlet></router-outlet>
+    </main>
+<app-footer></app-footer>

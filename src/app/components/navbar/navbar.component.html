@@ -1,0 +1,33 @@
+<nav class="bg-white shadow-sm px-6 py-4 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <img src="/assets/logo.png" alt="DHC logo" class="w-10 h-10" routerLink='/' style="cursor: pointer;"/>
+      <span class="text-2xl font-bold text-[#1F2D3D] tracking-tight">DHC Health Analytics</span>
+    </div>
+
+    <!-- Botón hamburguesa (solo visible en mobile) -->
+    <button
+      class="md:hidden text-[#1F2D3D] text-3xl focus:outline-none"
+      (click)="menuAbierto = !menuAbierto"
+    >
+      ☰
+    </button>
+
+    <!-- Navegación desktop -->
+    <div class="hidden md:flex gap-8 text-[#1F2D3D] font-medium text-sm uppercase tracking-wide">
+      <a routerLink="/" routerLinkActive="text-[#C3275A]" [routerLinkActiveOptions]="{ exact: true }">Inicio</a>
+      <a routerLink="/about" routerLinkActive="text-[#C3275A]">Quiénes Somos</a>
+      <a routerLink="/services" routerLinkActive="text-[#C3275A]">Servicios</a>
+    </div>
+  </div>
+
+  <!-- Dropdown mobile -->
+  <div
+    *ngIf="menuAbierto"
+    class="md:hidden mt-4 px-4 pb-4 flex flex-col gap-3 text-[#1F2D3D] font-medium text-sm uppercase tracking-wide"
+  >
+    <a routerLink="/" routerLinkActive="text-[#C3275A]" [routerLinkActiveOptions]="{ exact: true }" (click)="menuAbierto = false">Inicio</a>
+    <a routerLink="/about" routerLinkActive="text-[#C3275A]" (click)="menuAbierto = false">Quiénes Somos</a>
+    <a routerLink="/services" routerLinkActive="text-[#C3275A]" (click)="menuAbierto = false">Servicios</a>
+  </div>
