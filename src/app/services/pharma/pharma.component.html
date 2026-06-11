@@ -1,0 +1,23 @@
+<section class="px-6 py-12 bg-white">
+  <div class="mb-6 px-4">
+    <button (click)="volver()" class="flex items-center text-[#C3275A] hover:text-[#8D1B42] transition font-medium">
+      <span class="text-2xl mr-2">←</span> Volver
+    </button>
+  </div>
+  
+  <h2 class="text-4xl font-bold mb-4 text-center text-[#1F2D3D]">Pharma</h2>
+  <p class="text-center text-[#4B5563] text-lg mb-12 max-w-2xl mx-auto">
+    Soluciones de análisis y negociación para la industria farmacéutica.
+  </p>
+
+  <div class="grid md:grid-cols-2 gap-8" [@cardAnimation]>
+    <a
+      *ngFor="let item of servicios"
+      [routerLink]="['/services/pharma', formatearRuta(item)]"
+      class="card group p-6 bg-[#F8F9FA] rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-[#C3275A] transition block text-center"
+    >
+      <span class="text-3xl text-[#C3275A] mb-2 block"></span>
+      <h3 class="text-xl font-semibold text-[#1F2D3D] group-hover:text-[#C3275A] transition">{{ item }}</h3>
+    </a>
+  </div>
+</section>
