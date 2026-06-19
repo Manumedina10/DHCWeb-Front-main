@@ -1,4 +1,22 @@
 <section class="px-6 py-12 bg-[#F8F9FA]">
+  <!-- SECCIÓN DE BOTONES DE DESCARGA INTERACTIVOS -->
+  <div
+    class="max-w-7xl mx-auto px-4 pt-12 pb-6 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-center items-center gap-6">
+
+    <!-- Botón Newsletter -->
+    <a href="assets/NEWSLETTER MAYO 2026.pdf" target="_blank"
+      class="w-full sm:w-auto text-center bg-pink-600 hover:bg-pink-700 text-white font-semibold px-8 py-4 rounded-lg shadow-md transition-all duration-200 text-lg flex items-center justify-center gap-2">
+      <span>NEWSLETTER</span>
+    </a>
+
+    <!-- Botón Reportes Especiales -->
+    <a href="assets/APROBACIONES FDA-EMA.pdf" target="_blank"
+      class="w-full sm:w-auto text-center bg-gray-800 hover:bg-gray-900 text-white font-semibold px-8 py-4 rounded-lg shadow-md transition-all duration-200 text-lg flex items-center justify-center gap-2">
+      <span>REPORTES ESPECIALES</span>
+    </a>
+
+  </div>
+
   <h2 class="text-4xl font-bold text-center text-[#1F2D3D] mb-4">Nuestros Servicios</h2>
   <p class="text-center text-[#4B5563] text-lg mb-12 max-w-2xl mx-auto">
     Explorá nuestras soluciones para hospitales, pagadores y empresas farmacéuticas.
@@ -6,65 +24,55 @@
 
   <div class="grid lg:grid-cols-3 gap-8">
     <!-- Hospitales -->
-    <a [routerLink]="['/services/hospitales']" class="group bg-white p-8 rounded-xl border border-gray-200 shadow hover:shadow-lg hover:border-[#C3275A] transition text-center">
-      <span class="text-4xl mb-4 block text-[#C3275A]"><svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#C3275A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="w-8 h-8 mb-4 mx-auto">
-     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-     <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-     <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-     <path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
-     <path d="M6 10h4m-2 -2v4" />
-   </svg>
-   </span>
-      <h3 class="text-2xl font-semibold text-[#1F2D3D] group-hover:text-[#C3275A] transition">Sanatorios y Hospitales</h3>
+    <a [routerLink]="['/services/hospitales']"
+      class="group bg-white p-8 rounded-xl border border-gray-200 shadow hover:shadow-lg hover:border-[#C3275A] transition text-center">
+      <span class="text-4xl mb-4 block text-[#C3275A]"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="none" stroke="#C3275A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+          class="w-8 h-8 mb-4 mx-auto">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
+          <path d="M6 10h4m-2 -2v4" />
+        </svg>
+      </span>
+      <h3 class="text-2xl font-semibold text-[#1F2D3D] group-hover:text-[#C3275A] transition">Sanatorios y Hospitales
+      </h3>
       <p class="text-[#4B5563] mt-2">Soluciones para gestión clínica, procesos e internación.</p>
     </a>
 
     <!-- Pagadores -->
-    <a [routerLink]="['/services/pagadores']" class="group bg-white p-8 rounded-xl border border-gray-200 shadow hover:shadow-lg hover:border-[#C3275A] transition text-center">
-      <span class="text-4xl mb-4 block text-[#C3275A]"><svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#C3275A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="w-8 h-8 mb-4 mx-auto">
-     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-     <path d="M7 15h-3a1 1 0 0 1 -1 -1v-8a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v3" />
-     <path d="M7 9m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
-     <path d="M12 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-   </svg>
-   
+    <a [routerLink]="['/services/pagadores']"
+      class="group bg-white p-8 rounded-xl border border-gray-200 shadow hover:shadow-lg hover:border-[#C3275A] transition text-center">
+      <span class="text-4xl mb-4 block text-[#C3275A]"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="none" stroke="#C3275A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+          class="w-8 h-8 mb-4 mx-auto">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M7 15h-3a1 1 0 0 1 -1 -1v-8a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v3" />
+          <path d="M7 9m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v8a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z" />
+          <path d="M12 14a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+        </svg>
+
       </span>
       <h3 class="text-2xl font-semibold text-[#1F2D3D] group-hover:text-[#C3275A] transition">Pagadores</h3>
       <p class="text-[#4B5563] mt-2">Análisis de oportunidades y mejora de eficiencia financiera.</p>
     </a>
 
     <!-- Pharma -->
-    <a [routerLink]="['/services/pharma']" class="group bg-white p-8 rounded-xl border border-gray-200 shadow hover:shadow-lg hover:border-[#C3275A] transition text-center">
-      <span class="text-4xl mb-4 block text-[#C3275A]"><svg xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="#C3275A"
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="w-8 h-8 mb-4 mx-auto">
-     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-     <path d="M9 3m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
-     <path d="M10 6v.98c0 .877 -.634 1.626 -1.5 1.77c-.866 .144 -1.5 .893 -1.5 1.77v8.48a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-8.48c0 -.877 -.634 -1.626 -1.5 -1.77a1.795 1.795 0 0 1 -1.5 -1.77v-.98" />
-     <path d="M7 12h10" />
-     <path d="M7 18h10" />
-     <path d="M11 15h2" />
-   </svg>
-   
+    <a [routerLink]="['/services/pharma']"
+      class="group bg-white p-8 rounded-xl border border-gray-200 shadow hover:shadow-lg hover:border-[#C3275A] transition text-center">
+      <span class="text-4xl mb-4 block text-[#C3275A]"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+          fill="none" stroke="#C3275A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+          class="w-8 h-8 mb-4 mx-auto">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M9 3m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z" />
+          <path
+            d="M10 6v.98c0 .877 -.634 1.626 -1.5 1.77c-.866 .144 -1.5 .893 -1.5 1.77v8.48a2 2 0 0 0 2 2h6a2 2 0 0 0 2 -2v-8.48c0 -.877 -.634 -1.626 -1.5 -1.77a1.795 1.795 0 0 1 -1.5 -1.77v-.98" />
+          <path d="M7 12h10" />
+          <path d="M7 18h10" />
+          <path d="M11 15h2" />
+        </svg>
+
       </span>
       <h3 class="text-2xl font-semibold text-[#1F2D3D] group-hover:text-[#C3275A] transition">Pharma</h3>
       <p class="text-[#4B5563] mt-2">Apps de análisis y negociación inteligente de precios.</p>
