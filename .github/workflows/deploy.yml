@@ -25,12 +25,13 @@ jobs:
       run: npx ng build --configuration production
 
     - name: Subir archivos a DonWeb por SSH
-      uses: appleboy/scp-action@master
+      uses: appleboy/scp-action@v0.1.7
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
         port: 5038
-        source: "dist/dhcweb-front/browser/*"
+        source: "dist/dhcweb-front/browser/**"
         target: "/var/www/html/dhcanalytics"
         strip_components: 3
+        overwrite: true
