@@ -48,8 +48,13 @@ export const routes: Routes = [
     path: 'services/pharma',
     children: [
       { path: 'app', component: PharmaAppComponent },
-      // ...
     ]
+  },
+  {
+    path: 'dhc-recursos-7f3k9',
+    loadComponent: () => import('./components/dhc-recursos/dhc-recursos.component').then(m => m.DhcRecursosComponent)
   },
   { path: '**', redirectTo: '' }
 ];
+
+
