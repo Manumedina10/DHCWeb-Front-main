@@ -32,6 +32,7 @@ jobs:
         password: ${{ secrets.SSH_PASSWORD }}
         port: 5038
         source: "dist/dhcweb-front/browser/*,dist/dhcweb-front/browser/**"
-        target: "public_html"
+        target: "/var/www/html/dhcanalytics"
+
         strip_components: 3
         overwrite: true
