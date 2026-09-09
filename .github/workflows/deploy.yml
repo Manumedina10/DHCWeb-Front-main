@@ -24,15 +24,9 @@ jobs:
     - name: Compilar proyecto Angular
       run: npx ng build --configuration production
 
-    - name: Subir archivos a DonWeb por SSH
-      uses: appleboy/scp-action@master
-      with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        password: ${{ secrets.SSH_PASSWORD }}
-        port: 5038
-        source: "dist/dhcweb-front/browser/*,dist/dhcweb-front/browser/**"
-        target: "/var/www/html/dhcanalytics"
+    - name: Instalar sshpass
+      run: sudo apt-get update && sudo apt-get install -y sshpass
 
-        strip_components: 3
-        overwrite: true
+    - name: Subir archivos a DonWeb por SSH / rsync
+      run: |
+        sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -avz -e "ssh -p 5038 -o StrictHostKeyChecking=no" dist/dhcweb-front/browser/ root@179.43.112.37:/var/www/html/dhcanalytics/
