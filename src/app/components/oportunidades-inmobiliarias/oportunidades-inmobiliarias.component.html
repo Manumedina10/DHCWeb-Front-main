@@ -1,0 +1,189 @@
+<div class="min-h-screen bg-slate-50 flex flex-col py-8 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto w-full">
+
+    <!-- Header / Brand -->
+    <header class="text-center pt-4 pb-8 border-b border-gray-200/80 mb-8 sm:mb-12">
+      <div class="inline-flex items-center justify-center gap-3 mb-6 bg-white px-5 py-2.5 rounded-full shadow-sm border border-gray-100">
+        <img src="assets/logo.png" alt="DHC Health Analytics Logo" class="w-9 h-9 object-contain" />
+        <span class="text-xl sm:text-2xl font-bold text-[#1F2D3D] tracking-tight">DHC Health Analytics</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1F2D3D] tracking-tight mb-4 leading-tight">
+        Oportunidades Inmobiliarias en Salud
+      </h1>
+      <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
+        Análisis y oportunidades del mercado inmobiliario en el sector de la salud,
+        identificadas por nuestro equipo especializado.
+      </p>
+    </header>
+
+    <!-- Documento principal -->
+    <main class="space-y-8">
+
+      <!-- Ficha de la Oportunidad Destacada -->
+      <div *ngIf="pdfPath" class="bg-white border border-gray-200/90 rounded-2xl p-6 sm:p-8 shadow-sm">
+        <div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6 pb-6 border-b border-gray-100">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl bg-[#C3275A]/10 flex items-center justify-center shrink-0 mt-1">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 stroke-[#C3275A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-[#C3275A]/10 text-[#C3275A]">
+                  Oportunidad Inmobiliaria
+                </span>
+                <span class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 text-[#1F2D3D] border border-slate-200/60">
+                  Capital Federal
+                </span>
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1F2D3D] tracking-tight">
+                TEASER – Sanatorio
+              </h2>
+              <p class="text-gray-500 text-sm mt-1">
+                Sanatorio de alta complejidad disponible en Capital Federal • Planta física de más de 9.000 m²
+              </p>
+            </div>
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="flex flex-wrap sm:flex-nowrap gap-3 shrink-0 sm:self-start">
+            <a [href]="pdfPath" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-[#C3275A] hover:bg-[#a81f4a] active:bg-[#8f193e] text-white font-semibold rounded-xl shadow-sm hover:shadow transition-all duration-200 text-sm tracking-wide">
+              <span>Abrir PDF</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+            <a [href]="pdfPath" download="TEASER-Sanatorio-DHC.pdf"
+               class="inline-flex items-center justify-center gap-2 px-5 py-2.5 border-2 border-[#C3275A] text-[#C3275A] hover:bg-[#C3275A]/5 font-semibold rounded-xl transition-all duration-200 text-sm tracking-wide">
+              <span>Descargar</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ficha técnica resumida -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-6">
+          <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl text-center">
+            <div class="text-xs text-gray-500 font-medium mb-1">Superficie</div>
+            <div class="text-base font-bold text-[#1F2D3D]">+9.000 m²</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl text-center">
+            <div class="text-xs text-gray-500 font-medium mb-1">Internación</div>
+            <div class="text-base font-bold text-[#1F2D3D]">81 Camas</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl text-center">
+            <div class="text-xs text-gray-500 font-medium mb-1">UTI</div>
+            <div class="text-base font-bold text-[#1F2D3D]">23 Camas</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl text-center">
+            <div class="text-xs text-gray-500 font-medium mb-1">Quirófanos</div>
+            <div class="text-base font-bold text-[#1F2D3D]">6 Quirófanos</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl text-center">
+            <div class="text-xs text-gray-500 font-medium mb-1">Hemodinamia</div>
+            <div class="text-base font-bold text-[#1F2D3D]">2 Salas</div>
+          </div>
+          <div class="p-3.5 bg-slate-50 border border-slate-100 rounded-xl text-center">
+            <div class="text-xs text-gray-500 font-medium mb-1">Imágenes</div>
+            <div class="text-base font-bold text-[#1F2D3D]">TAC / Reson.</div>
+          </div>
+        </div>
+
+        <!-- Características principales -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600 mb-8 p-4 bg-slate-50/70 border border-slate-100 rounded-xl">
+          <div class="space-y-2">
+            <div class="flex items-start gap-2">
+              <span class="text-[#C3275A] font-bold mt-0.5">•</span>
+              <span><strong>Ubicación:</strong> Capital Federal (actualmente sin actividad).</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-[#C3275A] font-bold mt-0.5">•</span>
+              <span><strong>Internación y Cuidados Críticos:</strong> 81 camas (12 en Master Suite) y UTI de 23 camas.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-[#C3275A] font-bold mt-0.5">•</span>
+              <span><strong>Área Quirúrgica e Intervencionista:</strong> 6 quirófanos, 2 salas de hemodinamia y 2 salas de recuperación.</span>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <div class="flex items-start gap-2">
+              <span class="text-[#C3275A] font-bold mt-0.5">•</span>
+              <span><strong>Diagnóstico por Imágenes:</strong> Resonancia Magnética (Abierta), Angioresonancia, Ecodoppler, TAC Doble Helicoidal, Multislice 64 CT y Rayos.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-[#C3275A] font-bold mt-0.5">•</span>
+              <span><strong>Servicios y Ambulatorio:</strong> Consultorios externos, guardia, shock room y servicio de urología.</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-[#C3275A] font-bold mt-0.5">•</span>
+              <span><strong>Áreas complementarias:</strong> Laboratorio clínico, recepción de turnos y sector de administración.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visor de PDF incorporado -->
+        <div class="mt-6">
+          <div class="flex items-center justify-between mb-3">
+            <h3 class="text-base font-bold text-[#1F2D3D] flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#C3275A]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              Vista previa del documento
+            </h3>
+            <a [href]="pdfPath" target="_blank" rel="noopener noreferrer" class="text-xs text-[#C3275A] hover:underline font-semibold">
+              Ver a pantalla completa &rarr;
+            </a>
+          </div>
+
+          <div class="w-full h-[650px] sm:h-[800px] rounded-xl overflow-hidden border border-gray-200 bg-slate-100 shadow-inner">
+            <iframe *ngIf="safePdfUrl"
+                    [src]="safePdfUrl"
+                    class="w-full h-full border-0"
+                    title="TEASER Sanatorio - Oportunidades Inmobiliarias">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Estado alternativo: si no hubiese PDF -->
+      <div *ngIf="!pdfPath"
+           class="bg-white border border-dashed border-gray-300 rounded-2xl p-10 sm:p-14 text-center shadow-sm">
+        <div class="w-16 h-16 rounded-2xl bg-[#C3275A]/10 flex items-center justify-center mx-auto mb-5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 stroke-[#C3275A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+        <h2 class="text-xl font-bold text-[#1F2D3D] mb-2">Contenido próximamente disponible</h2>
+        <p class="text-gray-500 text-sm max-w-md mx-auto leading-relaxed">
+          El informe de oportunidades inmobiliarias en salud estará disponible en breve.
+        </p>
+      </div>
+
+    </main>
+
+    <!-- Volver al inicio -->
+    <div class="mt-10 text-center">
+      <a routerLink="/"
+         class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-[#C3275A] transition-colors duration-200 font-medium">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+        </svg>
+        Volver al inicio
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-14 sm:mt-16 pt-8 border-t border-gray-200/80 text-center">
+      <div class="text-lg sm:text-xl font-bold text-[#1F2D3D]">DHC Health Analytics</div>
+      <div class="text-sm text-gray-600 mt-1 font-medium">Datos que transforman información en decisiones</div>
+      <div class="text-xs text-gray-400 mt-4">&copy; 2026 DHC Health Analytics. Todos los derechos reservados.</div>
+    </footer>
+
+  </div>
+</div>

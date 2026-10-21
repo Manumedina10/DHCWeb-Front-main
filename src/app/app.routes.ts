@@ -54,7 +54,16 @@ export const routes: Routes = [
     path: 'dhc-recursos-7f3k9',
     loadComponent: () => import('./components/dhc-recursos/dhc-recursos.component').then(m => m.DhcRecursosComponent)
   },
+  {
+    path: 'oportunidades-inmobiliarias',
+    loadComponent: () => import('./components/oportunidades-inmobiliarias/oportunidades-inmobiliarias.component').then(m => m.OportunidadesInmobiliariasComponent)
+  },
+  {
+    path: 'reportes-y-newsletter',
+    loadComponent: () => import('./components/reportes-y-newsletter/reportes-y-newsletter.component').then(m => m.ReportesYNewsletterComponent)
+  },
   { path: '**', redirectTo: '' }
+
 ];
 
 
