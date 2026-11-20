@@ -25,8 +25,8 @@ export class DhcRecursosComponent implements OnInit {
       id: 1,
       titulo: 'RADAR DHC',
       descripcion: 'Newsletter con las noticias relevantes del sector de la salud.',
-      archivo: 'radar-dhc-agosto-2026.pdf',
-      pdfPath: 'assets/documentos/radar-dhc-agosto-2026.pdf',
+      archivo: 'radar-dhc-octubre-2026.pdf',
+      pdfPath: 'assets/documentos/radar-dhc-octubre-2026.pdf',
       badge: 'Noticias & Mercado',
       iconType: 'radar'
     },
@@ -43,8 +43,8 @@ export class DhcRecursosComponent implements OnInit {
       id: 3,
       titulo: 'Reporte de ensayos clínicos',
       descripcion: 'Reporte relevante de ensayos Fase III y desarrollos terapéuticos.',
-      archivo: 'reporte-fase-iii-agosto-2026.pdf',
-      pdfPath: 'assets/documentos/reporte-fase-iii-agosto-2026.pdf',
+      archivo: 'reporte-fase-iii-octubre-2026.pdf',
+      pdfPath: 'assets/documentos/reporte-fase-iii-octubre-2026.pdf',
       badge: 'Investigación',
       iconType: 'clinicos'
     },
@@ -52,8 +52,8 @@ export class DhcRecursosComponent implements OnInit {
       id: 4,
       titulo: 'Aprobaciones FDA / EMA',
       descripcion: 'Informe de nuevos fármacos y aprobaciones regulatorias.',
-      archivo: 'aprobaciones-fda-ema-agosto-2026.pdf',
-      pdfPath: 'assets/documentos/aprobaciones-fda-ema-agosto-2026.pdf',
+      archivo: 'aprobaciones-fda-ema-octubre-2026.pdf',
+      pdfPath: 'assets/documentos/aprobaciones-fda-ema-octubre-2026.pdf',
       badge: 'Regulatorio',
       iconType: 'fda'
     },

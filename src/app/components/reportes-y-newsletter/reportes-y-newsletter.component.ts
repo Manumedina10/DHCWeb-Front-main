@@ -3,13 +3,20 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Title, Meta } from '@angular/platform-browser';
 
+interface BotonAccion {
+  texto: string;
+  pdfPath: string;
+}
+
 interface ReporteEjemplo {
   id: number;
   titulo: string;
   descripcion: string;
   badge: string;
-  /** Ruta al PDF. null = pendiente de incorporación. */
-  pdfPath: string | null;
+  /** Ruta al PDF. null = pendiente de incorporación o cuando usa botones específicos. */
+  pdfPath?: string | null;
+  /** Lista opcional de botones cuando la sección incluye más de un documento. */
+  botones?: BotonAccion[];
   /** Texto informativo del QR. null = pendiente de materiales. */
   qrInfo: string | null;
 }
@@ -35,7 +42,7 @@ export class ReportesYNewsletterComponent implements OnInit {
       titulo: 'RADAR DHC — Newsletter',
       descripcion: 'Newsletter con las noticias más relevantes del sector salud: medicina, industria farmacéutica y mercado local.',
       badge: 'Noticias & Mercado',
-      pdfPath: 'assets/documentos/radar-dhc-agosto-2026.pdf',
+      pdfPath: 'assets/documentos/radar-dhc-octubre-2026.pdf',
       qrInfo: null
     },
     {
@@ -51,7 +58,17 @@ export class ReportesYNewsletterComponent implements OnInit {
       titulo: 'Información Médica Relevante',
       descripcion: 'Resultados de Fase III, aprobaciones FDA-EMA, adquisiciones y nuevos desarrollos terapéuticos.',
       badge: 'Investigación',
-      pdfPath: 'assets/documentos/aprobaciones-fda-ema-agosto-2026.pdf',
+      pdfPath: null,
+      botones: [
+        {
+          texto: 'Aprobaciones FDA / EMA',
+          pdfPath: 'assets/documentos/aprobaciones-fda-ema-octubre-2026.pdf'
+        },
+        {
+          texto: 'Ensayos de Fase 3',
+          pdfPath: 'assets/documentos/reporte-fase-iii-octubre-2026.pdf'
+        }
+      ],
       qrInfo: null
     },
     {
